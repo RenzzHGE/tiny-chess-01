@@ -12,3 +12,10 @@ a clock, so every trial replays move for move.
 `main.py` is the whole engine: 0x88 board, alpha-beta with quiescence,
 transposition table, MVV-LVA + killer move ordering, and a piece-square
 evaluation. It reads, imports and runs no other file of this repository.
+
+## Validation
+
+Move generation is verified by perft (startpos 20/400/8902/197281,
+Kiwipete 48/2039/97862, and two en-passant positions, all identical
+before and after the final cleanup). Measured strength is about Elo
+1177 against the house Sunfish baseline (1360).
